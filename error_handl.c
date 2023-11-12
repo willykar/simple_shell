@@ -56,11 +56,11 @@ char *error_get_cd(data_s *datas)
 	else
 	{
 		msg = ": can't cd into ";
-		length_id = _strlen(datas->args[1]);
+		length_id = _strlength(datas->args[1]);
 	}
 
-	length = _strlen(datas->argv[0]) + _strlen(datas->args[0]);
-	length += _strlen(ver_str) + _strlen(msg) + length_id + 5;
+	length = _strlength(datas->argv[0]) + _strlength(datas->args[0]);
+	length += _strlength(ver_str) + _strlength(msg) + length_id + 5;
 	error = malloc(sizeof(char) * (length + 1));
 
 	if (error == 0)
@@ -69,7 +69,7 @@ char *error_get_cd(data_s *datas)
 		return (NULL);
 	}
 
-	error = strcat_cd(datash, msg, error, ver_str);
+	error = strcat_cd(datas, msg, error, ver_str);
 
 	free(ver_str);
 
@@ -88,8 +88,8 @@ char *error_not_found(data_s *datas)
 	char *ver_str;
 
 	ver_str = aux_itoa(datas->counter);
-	length = _strlen(datas->argv[0]) + _strlen(ver_str);
-	length += _strlen(datas->args[0]) + 16;
+	length = _strlength(datas->argv[0]) + _strlength(ver_str);
+	length += _strlength(datas->args[0]) + 16;
 	error = malloc(sizeof(char) * (length + 1));
 	if (error == 0)
 	{
@@ -121,8 +121,8 @@ char *error_exit_shell(data_s *datas)
 	char *ver_str;
 
 	ver_str = aux_itoa(datas->counter);
-	length = _strlen(datas->argv[0]) + _strlen(ver_str);
-	length += _strlen(datas->args[0]) + _strlen(datas->args[1]) + 23;
+	length = _strlength(datas->argv[0]) + _strlength(ver_str);
+	length += _strlength(datas->args[0]) + _strlength(datas->args[1]) + 23;
 	error = malloc(sizeof(char) * (length + 1));
 	if (error == 0)
 	{

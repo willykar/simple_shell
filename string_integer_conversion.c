@@ -12,7 +12,7 @@ int get_length(int n)
 
 	if (n < 0)
 	{
-		lenght++;
+		length++;
 		a = n * -1;
 	}
 	else
@@ -21,7 +21,7 @@ int get_length(int n)
 	}
 	while (a > 9)
 	{
-		lenght++;
+		length++;
 		a = a / 10;
 	}
 
@@ -42,7 +42,7 @@ char *aux_itoa(int n)
 	if (buffer == 0)
 		return (NULL);
 
-	*(buffer + lenght) = '\0';
+	*(buffer + length) = '\0';
 
 	if (n < 0)
 	{

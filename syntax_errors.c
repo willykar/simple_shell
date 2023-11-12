@@ -118,7 +118,7 @@ void print_syntax_error(data_s *datas, char *input, int i, int bool)
 	msg2 = ": Syntax error: \"";
 	msg3 = "\" unexpected\n";
 	counter = aux_itoa(datas->counter);
-	length = _strlength(datas->av[0]) + _strlength(counter);
+	length = _strlength(datas->argv[0]) + _strlength(counter);
 	length += _strlength(msg1) + _strlength(msg2) + _strlength(msg3) + 2;
 
 	error = malloc(sizeof(char) * (length + 1));

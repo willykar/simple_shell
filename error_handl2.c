@@ -13,8 +13,8 @@ char *error_env(data_s *datas)
 
 	ver_str = aux_itoa(datas->counter);
 	msg = ": Not able to add or remove from the environment\n";
-	length = _strlen(datas->argv[0]) + _strlen(ver_str);
-	length += _strlen(datas->args[0]) + _strlen(msg) + 4;
+	length = _strlength(datas->argv[0]) + _strlength(ver_str);
+	length += _strlength(datas->args[0]) + _strlength(msg) + 4;
 	error = malloc(sizeof(char) * (length + 1));
 	if (error == 0)
 	{
@@ -40,15 +40,15 @@ for the path and failure
  * @datas: data
  * Return: (error string)
  */
-char *error_path_126(data_shel *datas)
+char *error_path_126(data_s *datas)
 {
 	int length;
 	char *ver_str;
 	char *error;
 
 	ver_str = aux_itoa(datas->counter);
-	length = _strlen(datas->argv[0]) + _strlen(ver_str);
-	length += _strlen(datas->args[0]) + 24;
+	length = _strlength(datas->argv[0]) + _strlength(ver_str);
+	length += _strlength(datas->args[0]) + 24;
 	error = malloc(sizeof(char) * (length + 1));
 	if (error == 0)
 	{
