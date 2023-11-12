@@ -210,7 +210,7 @@ char *error_path_126(data_s *datas);
 int get_error(data_s *datas, int eval);
 
 /* get_sigint.c */
-void get_sigint(int sig);
+void get_sigint(int signal);
 
 /* aux_help.c */
 void aux_help_env(void);

@@ -142,7 +142,7 @@ int split_commands(data_s *datas, char *input)
 	{
 		datas->input = list_l->line;
 		datas->args = split_line(datas->input);
-		loop = exec_line(datas);
+		loop = execute_line(datas);
 		free(datas->args);
 
 		if (loop == 0)

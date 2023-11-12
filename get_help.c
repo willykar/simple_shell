@@ -25,7 +25,7 @@ int get_help(data_s *datas)
 		aux_help_alias();
 	else
 		write(STDERR_FILENO, datas->args[0],
-		      _strlen(datas->args[0]));
+		      _strlength(datas->args[0]));
 
 	datas->status = 0;
 	return (1);

@@ -11,7 +11,7 @@ void check_env(r_var **h, char *in, data_s *data)
 	int row, chr, a, lval;
 	char **_env;
 
-	_envr = data->_environment;
+	_env = data->_environment;
 	for (row = 0; _env[row]; row++)
 	{
 		for (a = 1, chr = 0; _env[row][chr]; chr++)
@@ -97,25 +97,25 @@ char *replaced_input(r_var **head, char *input, char *new_input, int nlen)
 	{
 		if (input[b] == '$')
 		{
-			if (!(indx->len_var) && !(indx->len_val))
+			if (!(indx->length_var) && !(indx->length_val))
 			{
 				new_input[a] = input[b];
 				b++;
 			}
-			else if (indx->len_var && !(indx->len_val))
+			else if (indx->length_var && !(indx->length_val))
 			{
-				for (c = 0; c < indx->len_var; c++)
+				for (c = 0; c < indx->length_var; c++)
 					b++;
 				a--;
 			}
 			else
 			{
-				for (c = 0; c < indx->len_val; c++)
+				for (c = 0; c < indx->length_val; c++)
 				{
 					new_input[a] = indx->val[c];
 					a++;
 				}
-				b += (indx->len_var);
+				b += (indx->length_var);
 				a--;
 			}
 			indx = indx->next;
@@ -158,7 +158,7 @@ char *rep_var(char *input, data_s *datas)
 
 	while (indx != NULL)
 	{
-		nlength += (indx->len_val - indx->len_var);
+		nlength += (indx->length_val - indx->length_var);
 		indx = indx->next;
 	}
 
