@@ -91,9 +91,9 @@ typedef struct builtin_s
 
 /* aux_lists.c */
 sep_list *add_sep_node_end(sep_list **head, char sep);
-void free_sep_list(sep_list **head);
+void free_sep(sep_list **head);
 line_list *add_line_node_end(line_list **head, char *line);
-void free_line_list(line_list **head);
+void free_line(line_list **head);
 
 /* aux_lists2.c */
 r_var *add_rvar_node(r_var **head, int lvar, char *var, int lval);
@@ -114,7 +114,7 @@ char **_reallocdp(char **ptr, unsigned int old_size, unsigned int new_size);
 /* aux_str2.c */
 char *_strdup(const char *s);
 int _strlength(const char *s);
-int cmp_chars(char str[], const char *delim);
+int comp_chars(char str[], const char *delim);
 char *_strtok(char str[], const char *delim);
 int _isdigit(const char *s);
 
