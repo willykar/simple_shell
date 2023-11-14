@@ -11,7 +11,7 @@ void check_env(r_var **h, char *in, data_s *data)
 	int row, chr, a, lval;
 	char **_env;
 
-	_env = data->_environment;
+	_env = data->_environ;
 	for (row = 0; _env[row]; row++)
 	{
 		for (a = 1, chr = 0; _env[row][chr]; chr++)

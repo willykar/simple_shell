@@ -92,7 +92,7 @@ void cd_dir_previous(data_s *datas)
 	getcwd(pwd, sizeof(pwd));
 	cp_pwd = _strdup(pwd);
 
-	p_oldpwd = _getenv("OLDPWD", datas->_environment);
+	p_oldpwd = _getenv("OLDPWD", datas->_environ);
 
 	if (p_oldpwd == NULL)
 		cp_oldpwd = cp_pwd;
@@ -106,7 +106,7 @@ void cd_dir_previous(data_s *datas)
 	else
 		set_environment("PWD", cp_oldpwd, datas);
 
-	cur_pwd = _getenv("PWD", datas->_environment);
+	cur_pwd = _getenv("PWD", datas->_environ);
 
 	write(STDOUT_FILENO, cur_pwd, _strlength(cur_pwd));
 	write(STDOUT_FILENO, "\n", 1);
@@ -132,7 +132,7 @@ void cd_to_home(data_s *datas)
 	getcwd(pwd, sizeof(pwd));
 	p_pwd = _strdup(pwd);
 
-	home = _getenv("HOME", datas->_environment);
+	home = _getenv("HOME", datas->_environ);
 
 	if (home == NULL)
 	{

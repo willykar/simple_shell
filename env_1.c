@@ -57,13 +57,13 @@ int _env(data_s *datas)
 {
 	int a, b;
 
-	for (a = 0; datas->_environment[a]; a++)
+	for (a = 0; datas->_environ[a]; a++)
 	{
 
-		for (b = 0; datas->_environment[a][b]; b++)
+		for (b = 0; datas->_environ[a][b]; b++)
 			;
 
-		write(STDOUT_FILENO, datas->_environment[a], b);
+		write(STDOUT_FILENO, datas->_environ[a], b);
 		write(STDOUT_FILENO, "\n", 1);
 	}
 	datas->status = 0;

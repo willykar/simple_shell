@@ -174,7 +174,7 @@ int cmd_execute(data_s *datas)
 		return (1);
 	if (exec == 0)
 	{
-		dir = _which(datas->args[0], datas->_environment);
+		dir = _which(datas->args[0], datas->_environ);
 		if (check_error_cmd(dir, datas) == 1)
 			return (1);
 	}
@@ -183,10 +183,10 @@ int cmd_execute(data_s *datas)
 	if (pd == 0)
 	{
 		if (exec == 0)
-			dir = _which(datas->args[0], datas->_environment);
+			dir = _which(datas->args[0], datas->_environ);
 		else
 			dir = datas->args[0];
-		execve(dir + exec, datas->args, datas->_environment);
+		execve(dir + exec, datas->args, datas->_environ);
 	}
 	else if (pd < 0)
 	{

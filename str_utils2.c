@@ -72,7 +72,7 @@ char *_strtok(char str[], const char *delim)
 
 	if (str != NULL)
 	{
-		if (cmp_chars(str, delim))
+		if (comp_chars(str, delim))
 			return (NULL);
 		split = str;
 		a = _strlength(str);

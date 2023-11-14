@@ -154,8 +154,8 @@ int split_commands(data_s *datas, char *input)
 			list_l = list_l->next;
 	}
 
-	free_sep_list(&head_s);
-	free_line_list(&head_l);
+	free_sep(&head_s);
+	free_line(&head_l);
 
 	if (loop == 0)
 		return (0);

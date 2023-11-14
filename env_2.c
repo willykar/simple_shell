@@ -23,7 +23,7 @@ char *copy_info(char *name, char *value)
 }
 
 /**
- * set_env - A function that sets an environment variable
+ * set_environment - A function that sets an environment variable
  * @name: name of the env variable
  * @value: value of the env
  * @datas: dta structure
@@ -33,23 +33,23 @@ void set_environment(char *name, char *value, data_s *datas)
 	int a;
 	char *var_envi, *name_envi;
 
-	for (a = 0; datas->_environment[a]; a++)
+	for (a = 0; datas->_environ[a]; a++)
 	{
-		var_envi = _strdup(datas->_environment[a]);
+		var_envi = _strdup(datas->_environ[a]);
 		name_envi = _strtok(var_envi, "=");
 		if (_strcmp(name_envi, name) == 0)
 		{
-			free(datas->_environment[a]);
-			datas->_environment[a] = copy_info(name_envi, value);
+			free(datas->_environ[a]);
+			datas->_environ[a] = copy_info(name_envi, value);
 			free(var_envi);
 			return;
 		}
 		free(var_envi);
 	}
 
-	datas->_environment = _reallocdp(datas->_environment, a, sizeof(char *) * (a + 2));
-	datas->_environment[a] = copy_info(name, value);
-	datas->_environment[a + 1] = NULL;
+	datas->_environ = _reallocdp(datas->_environ, a, sizeof(char *) * (a + 2));
+	datas->_environ[a] = copy_info(name, value);
+	datas->_environ[a + 1] = NULL;
 }
 
 /**
@@ -89,9 +89,9 @@ int _unsetenv(data_s *datas)
 		return (1);
 	}
 	c = -1;
-	for (a = 0; datas->_environment[a]; a++)
+	for (a = 0; datas->_environ[a]; a++)
 	{
-		var_envi = _strdup(datas->_environment[a]);
+		var_envi = _strdup(datas->_environ[a]);
 		name_envi = _strtok(var_envi, "=");
 		if (_strcmp(name_envi, datas->args[1]) == 0)
 		{
@@ -105,17 +105,17 @@ int _unsetenv(data_s *datas)
 		return (1);
 	}
 	realloc_environment = malloc(sizeof(char *) * (a));
-	for (a = b = 0; datas->_environment[a]; a++)
+	for (a = b = 0; datas->_environ[a]; a++)
 	{
 		if (a != c)
 		{
-			realloc_environment[b] = datas->_environment[a];
+			realloc_environment[b] = datas->_environ[a];
 			b++;
 		}
 	}
 	realloc_environment[b] = NULL;
-	free(datas->_environment[c]);
-	free(datas->_environment);
-	datas->_environment = realloc_environment;
+	free(datas->_environ[c]);
+	free(datas->_environ);
+	datas->_environ = realloc_environment;
 	return (1);
 }

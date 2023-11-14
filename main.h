@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <unistd.h>
+#include <string.h>
 #include <stdlib.h>
 #include <sys/types.h>
 #include <sys/wait.h>
@@ -16,8 +17,13 @@
 #define TOK_BUFFSIZE 128
 #define TOK_DELIM " \t\r\n\a"
 
+void handle_command(char *buffer);
+int find_executable_in_path(const char *command, char *full_path, size_t max_length);
+
+int bfree(void **);
+
 /* Points to an array of pointers */
-extern char **environment;
+extern char **environ;
 
 /**
  * struct data - struct that contain data
@@ -36,7 +42,7 @@ typedef struct data
 	char **args;
 	int status;
 	int counter;
-	char **_environment;
+	char **_environ;
 	char *pid;
 } data_s;
 
