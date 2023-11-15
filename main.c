@@ -1,10 +1,7 @@
 #include "main.h"
-
 /**
- * free_data - frees data structure
- *
- * @datash: data structure
- * Return: no return
+ * free_data - A function that frees the data structure used
+ * @datas: data to be used
  */
 void free_data(data_s *datas)
 {
@@ -20,11 +17,9 @@ void free_data(data_s *datas)
 }
 
 /**
- * set_data - Initialize data structure
- *
- * @datash: data structure
- * @av: argument vector
- * Return: no return
+ * set_data - A function that initialize the data structure used
+ * @datas: The data to be used
+ * @argv: The argument vector containing the list of arguments
  */
 void set_data(data_s *datas, char **argv)
 {
@@ -51,12 +46,10 @@ void set_data(data_s *datas, char **argv)
 }
 
 /**
- * main - Entry point
- *
- * @ac: argument count
- * @av: argument vector
- *
- * Return: 0 on success.
+ * main - The function's entry point
+ * @argc: The argument count(number of arguments)
+ * @argv: The argument vector(contains the list of arguments)
+ * Return: (0) if successful
  */
 int main(int argc, char **argv)
 {
