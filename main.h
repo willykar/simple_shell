@@ -21,7 +21,7 @@ extern char **environ;
 
 /**
  * struct data - struct that contain data
- * @av: argument vector containing the list of arguments
+ * @argv: argument vector containing the list of arguments
  * @input: command line
  * @args: arguments
  * @status: status of shell
@@ -65,9 +65,9 @@ typedef struct line_list_s
 
 /**
  * struct r_var_list - a single linked list
- * @len_var: the length of the variable
+ * @length_var: the length of the variable
  * @val: value of the variable
- * @len_val: length of value
+ * @length_val: length of value
  * @next: the next node
  */
 typedef struct r_var_list
