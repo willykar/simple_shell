@@ -142,24 +142,3 @@ r_var *add_rvar_node(r_var **head, int lvar, char *val, int lval)
 
 	return (*head);
 }
-
-/**
- * free_rvar_list - A function that frees a list
- * @head: The head of a list
- */
-void free_rvar_list(r_var **head)
-{
-	r_var *temp;
-	r_var *curr;
-
-	if (head != NULL)
-	{
-		curr = *head;
-		while ((temp = curr) != NULL)
-		{
-			curr = curr->next;
-			free(temp);
-		}
-		*head = NULL;
-	}
-}
