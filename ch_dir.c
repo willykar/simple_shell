@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * cd_dt - changes the parent directory
+ * cd_dt - A function that changes the parent directory
  * @datas: data
  */
 void cd_dt(data_s *datas)

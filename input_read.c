@@ -35,12 +35,12 @@ void free_rvar_list(r_var **head)
 	}
 }
 /**
- * error_path_126 - A function that gives an error message
-for the path and failure
+ * error_path_p - A function that gives an error message
+ * for the path and permission denied failure
  * @datas: data
  * Return: (error string)
  */
-char *error_path_126(data_s *datas)
+char *error_path_p(data_s *datas)
 {
 	int length;
 	char *ver_str;

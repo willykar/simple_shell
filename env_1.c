@@ -25,7 +25,7 @@ int cmp_env_name(const char *nenvi, const char *name)
 /**
  * _env - A function that prints environment variables
  * @datas: data
- * Return: (1) on success
+ * Return: (1) if successful
  */
 int _env(data_s *datas)
 {
@@ -47,7 +47,7 @@ int _env(data_s *datas)
 /**
  * _getenv - A function that gets an environment variable
  * @name: The name of the variable
- * @_environ: The variable environ
+ * @_environment: The variable environment
  * Return: (value of the variable or NULL)
  */
 char *_getenv(const char *name, char **_environment)

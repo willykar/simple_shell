@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * get_error - calls the errors
+ * get_error - A function that calls errors
  * @datas: data structure which has arguments
  * @eval: the error value
  * Return: (error)
@@ -15,7 +15,7 @@ int get_error(data_s *datas, int eval)
 		error = error_env(datas);
 		break;
 	case 126:
-		error = error_path_126(datas);
+		error = error_path_p(datas);
 		break;
 	case 127:
 		error = error_not_found(datas);

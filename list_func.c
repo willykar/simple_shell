@@ -33,7 +33,7 @@ sep_list *add_sep_node_end(sep_list **head, char sep)
 }
 
 /**
- * free_sep_list - A function that frees a list
+ * free_sep - A function that frees a list
  * @head: The head of a list
  */
 void free_sep(sep_list **head)
@@ -86,7 +86,7 @@ line_list *add_line_node_end(line_list **head, char *line)
 }
 
 /**
- * free_line_list - A function that frees a list
+ * free_line - A function that frees a list
  * @head: The head of the linked list
  */
 void free_line(line_list **head)

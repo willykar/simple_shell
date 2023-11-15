@@ -180,7 +180,7 @@ char *error_get_alias(char **args);
 char *error_env(data_s *datas);
 char *error_syntax(char **args);
 char *error_permission(char **args);
-char *error_path_126(data_s *datas);
+char *error_path_p(data_s *datas);
 
 int get_error(data_s *datas, int eval);
 

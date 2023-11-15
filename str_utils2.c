@@ -18,7 +18,7 @@ char *_strdup(const char *s)
 }
 
 /**
- * _strlen - A function that returns the length of a string
+ * _strlength - A function that returns the length of a string
  * @s: pointer of type char
  * Return: (0)
  */
@@ -33,7 +33,7 @@ int _strlength(const char *s)
 }
 
 /**
- * cmp_chars - A function that compares chars of strings
+ * comp_chars - A function that compares chars of strings
  * @str: string
  * @delim: delimiter
  * Return: (1) if chars are equal or 0 if they are not
@@ -107,7 +107,6 @@ char *_strtok(char str[], const char *delim)
 
 /**
  * _isdigit -  A function that defines if a string passed is a number
- *
  * @s: The input string
  * Return: (1) if the string is a number or (0) otherwise
  */

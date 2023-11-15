@@ -42,7 +42,8 @@ void aux_help_unsetenv(void)
 
 
 /**
- * aux_help_general - help information
+ * aux_help_general - A function that provides help information
+ * for the builtin help
  */
 void aux_help_general(void)
 {

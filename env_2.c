@@ -53,10 +53,10 @@ void set_environment(char *name, char *value, data_s *datas)
 }
 
 /**
- * _setenv - compares variable names(environment)
+ * _setenv - A function that compares variable names(environment)
  * with the passed name
  * @datas: data
- * Return: 1 if successful
+ * Return: (1) if successful
  */
 int _setenv(data_s *datas)
 {
@@ -73,8 +73,8 @@ int _setenv(data_s *datas)
 }
 
 /**
- * _unsetenv - a function that deletes environment variables
- * @datash: data
+ * _unsetenv - A function that deletes environment variables
+ * @datas: data
  * Return: (1) if success
  */
 int _unsetenv(data_s *datas)

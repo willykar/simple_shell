@@ -26,7 +26,8 @@ void aux_help_alias(void)
 	write(STDOUT_FILENO, help, _strlength(help));
 }
 /**
- * aux_help_cd - Help information for the built-in alias
+ * aux_help_cd - A function that provides
+ * help information for the built-in alias
  */
 void aux_help_cd(void)
 {

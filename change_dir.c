@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * cd_shell - changes the current directory
+ * cd_shell - A function that changes the current directory
  * @datas: data
  * Return: (1) if success
  */

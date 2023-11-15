@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * get_builtin - builtin
+ * get_builtin - A builtin function
  * @cmd: the command
  * Return: (function pointer of the builtin command)
  */
