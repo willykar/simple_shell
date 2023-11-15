@@ -7,7 +7,6 @@ void cd_dt(data_s *datas)
 {
 	char pwd[PATH_MAX];
 	char *dir, *cp_pwd, *cp_sp_pwd;
-
 	/* get the current working dir */
 	getcwd(pwd, sizeof(pwd));
 	cp_pwd = _strdup(pwd);
@@ -47,7 +46,6 @@ void cd_dt(data_s *datas)
 	datas->status = 0;
 	free(cp_pwd);
 }
-
 /**
  * cd_change - A function that changes to a particular the directory provided
  * @datas: data
