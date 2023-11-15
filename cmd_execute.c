@@ -156,7 +156,7 @@ int check_error_cmd(char *dir, data_s *datas)
 }
 
 /**
- * cmd_exec - A function that executes the command lines
+ * cmd_execute - A function that executes the command lines
  * @datas: data
  * Return: (1) on success
  */

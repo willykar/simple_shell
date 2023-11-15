@@ -1,6 +1,7 @@
 #include "main.h"
 /**
- * aux_help - A function that will provide helpful information for the built-in help
+ * aux_help - A function that will provide
+ * helpful information for the built-in help
  */
 void aux_help(void)
 {
