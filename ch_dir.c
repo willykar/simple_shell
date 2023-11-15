@@ -120,7 +120,7 @@ void cd_dir_previous(data_s *datas)
 	chdir(cur_pwd);
 }
 
-/** 
+/**
  * cd_to_home - a function that changes dir to  home directory
  * @datas: data
  */

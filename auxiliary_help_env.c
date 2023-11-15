@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
- * aux_help_env - A function that provides helpful information for the builtin env
- */ 
+ * aux_help_env - A function that provides
+ * helpful information for the builtin env
+ */
 void aux_help_env(void)
 {
 	char *help = "env: env [option] [name=value] [command [args]]\n\t";
@@ -13,7 +14,8 @@ void aux_help_env(void)
 
 }
 /**
- * aux_help_setenv - A function that provides helpful information for the setenv
+ * aux_help_setenv - A function that provides
+ * helpful information for the setenv
  */
 void aux_help_setenv(void)
 {
@@ -47,7 +49,7 @@ void aux_help_general(void)
 	char *help = "^-^ bash, version 1.00-release\n";
 
 	write(STDOUT_FILENO, help, _strlength(help));
-	help = "These commands are defined internally.Type 'help' to see the full list";
+	help = "These commands are defined.Type 'help' to see the full list";
 	write(STDOUT_FILENO, help, _strlength(help));
 	help = "Type 'help' to find out more about the function 'name'.\n\n ";
 	write(STDOUT_FILENO, help, _strlength(help));
@@ -71,43 +73,5 @@ void aux_help_exit(void)
 	help = "Exits the shell with a status of N. If N is ommited, the exit";
 	write(STDOUT_FILENO, help, _strlength(help));
 	help = "status is that of the last command executed\n";
-	write(STDOUT_FILENO, help, _strlength(help));
-}
-#include "main.h"
-
-/**
- * aux_help - A function that will provide helpful information for the built-in help
- */
-void aux_help(void)
-{
-	char *help = "help: help [-dms] [pattern ...]\n";
-
-	write(STDOUT_FILENO, help, _strlength(help));
-	help = "\tDisplay information about built-in commands.\n ";
-	write(STDOUT_FILENO, help, _strlength(help));
-	help = "Displays a brief summary of the built-in commands.\n";
-	write(STDOUT_FILENO, help, _strlength(help));
-}
-
-/**
- * aux_help_alias - A function that provides help info for the alias
- */
-void aux_help_alias(void)
-{
-	char *help = "alias: alias [-p] [name[=value]...]\n";
-
-	write(STDOUT_FILENO, help, _strlength(help));
-	help = "\tDefine or display aliases.\n ";
-	write(STDOUT_FILENO, help, _strlength(help));
-}
-/**
- * aux_help_cd - Help information for the built-in alias
- */
-void aux_help_cd(void)
-{
-	char *help = "cd: cd [-L|[-P [-e]] [-@]] [dir]\n";
-
-	write(STDOUT_FILENO, help, _strlength(help));
-	help = "\tChange the shell working directory.\n ";
 	write(STDOUT_FILENO, help, _strlength(help));
 }

@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * check_env -  A function that checks if the typed variable is an environment variable
+ * check_env -  A function that checks
+ * if the typed variable is an environment variable
  * @h: The head of the linked list
  * @in: The input string
  * @data: data
@@ -45,6 +46,7 @@ void check_env(r_var **h, char *in, data_s *data)
  * @in: The input string
  * @st: This is the last status of the Shell
  * @data: data structure of the shell
+ * Return: a.
  */
 int check_vars(r_var **h, char *in, char *st, data_s *data)
 {
@@ -133,7 +135,7 @@ char *replaced_input(r_var **head, char *input, char *new_input, int nlen)
 /**
  * rep_var - A function that calls functions to replace a string into vars
  * @input: The input string
- * @datash: data structure to be used
+ * @datas: data structure to be used
  * Return: (the replaced string)
  */
 char *rep_var(char *input, data_s *datas)
